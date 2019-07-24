@@ -1,5 +1,5 @@
 {
-  "name": "react-leaflet-universal",
+  "name": "@utofun/react-leaflet-universal",
   "version": "2.1.0",
   "description": "Simple wrapper around react-leaflet for painless universal integration",
   "main": "dist/index.js",
@@ -36,5 +36,9 @@
     "react": "^15.x || ^16.x",
     "react-dom": "^15.x || ^16.x",
     "react-leaflet": "^2.0.1"
+  },
+  "dependencies": {
+    "lodash.get": "^4.4.2",
+    "lodash.set": "^4.3.2"
   }
 }

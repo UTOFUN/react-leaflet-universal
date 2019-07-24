@@ -1,4 +1,5 @@
 import decorate from './decorator';
+import set from "lodash.set";
 
 const COMPONENTS = [
 	'AttributionControl',
@@ -12,6 +13,8 @@ const COMPONENTS = [
 	'ImageOverlay',
 	'LayerGroup',
 	'LayersControl',
+	'LayersControl.BaseLayer',
+	'LayersControl.Overlay',
 	'Map',
 	'MapComponent',
 	'MapControl',
@@ -33,8 +36,7 @@ const COMPONENTS = [
 ];
 
 const COMPONENT_MAP = COMPONENTS.reduce((map, name) => {
-	map[name] = decorate(name);
-	return map;
+	return set(map, name, decorate(name));
 }, {});
 
 module.exports = COMPONENT_MAP;

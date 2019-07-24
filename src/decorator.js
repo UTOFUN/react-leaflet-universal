@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
+import get from "lodash.get";
 
 const { node, oneOfType, func } = PropTypes;
 
@@ -15,7 +16,7 @@ export default function decorate(componentName) {
 
 		componentDidMount() {
 			this.setState(() => ({ loaded: true }));
-			this.ClientComponent = require('react-leaflet')[componentName];
+			this.ClientComponent = get(require('react-leaflet'), componentName);
 		}
 
 		render() {
